@@ -13,7 +13,7 @@ class Main{
 		long y11, y12, y13;
 		long y21, y22, y23;
 		long y31, y32, y33;
-		long n;
+		long n = 1;
 
 		System.out.print("Enter matrix size: ");
 		short matrix_size = scan.nextShort();
@@ -29,6 +29,10 @@ class Main{
 		
 		System.out.println("Choose action(0 - +, 1 - -. 2 - *, 3 - /, 4 - X * N):");
 		choose = scan.nextShort();
+
+		if(choose == 4){
+			n = scan.nextLong();
+		}
 
 		System.out.println("Enter first line x:");
 		x11 = scan.nextLong();
@@ -87,6 +91,8 @@ class Main{
 					case 3:
 						System.out.print(matrix[i][j] / matrix1[i][j] + " ");
 						break;
+					case 4:
+						System.out.print(matrix[i][j] * n + " ");
 				}
 			}
 			System.out.println(" ");
