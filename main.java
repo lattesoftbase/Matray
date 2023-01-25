@@ -24,8 +24,8 @@ class Main{
 
 		short choose;
 
-		long[][] matrix = new long[2][2];
-		long[][] matrix1 = new long[2][2];
+		long[][] matrix = new long[matrix_size][matrix_size];
+		long[][] matrix1 = new long[matrix_size][matrix_size];
 		
 		System.out.println("Choose action(0 - +, 1 - -. 2 - *, 3 - /, 4 - X * N):");
 		choose = scan.nextShort();
@@ -52,27 +52,47 @@ class Main{
 
 		matrix[0][0] = x11;
 		matrix[0][1] = x12;
-		//matrix[0][2] = x13;
 
 		matrix[1][0] = x21;
 		matrix[1][1] = x22;
-		//matrix[1][2] = x23;
-
-		//matrix[2][0] = x31;
-		//matrix[2][1] = x32;
-		//matrix[2][2] = x33;
 
 		matrix1[0][0] = y11;
 		matrix1[0][1] = y12;
-		//matrix1[0][2] = y13;
 
 		matrix1[1][0] = y21;
 		matrix1[1][1] = y22;
-		//matrix1[1][2] = y23;
 
-		//matrix1[2][0] = y31;
-		//matrix1[2][1] = y32;
-		//matrix1[2][2] = y33;
+
+		if(matrix_size > 2){
+			System.out.println("Enter extended first line x:");
+			x13 = scan.nextLong();
+			System.out.println("Enter extended second line x:");
+			x23 = scan.nextLong();
+			System.out.println("Enter third line x:");
+			x31 = scan.nextLong();
+			x32 = scan.nextLong();
+			x33 = scan.nextLong();
+
+			System.out.println("Enter extended first line y:");
+			y13 = scan.nextLong();
+			System.out.println("Enter extended second line y:");
+			y23 = scan.nextLong();
+			System.out.println("Enter third line y:");
+			y31 = scan.nextLong();
+			y32 = scan.nextLong();
+			y33 = scan.nextLong();
+
+			matrix[0][2] = x13;
+			matrix[1][2] = x23;
+			matrix[2][0] = x31;
+			matrix[2][1] = x32;
+			matrix[2][2] = x33;
+			matrix1[0][2] = y13;
+			matrix1[1][2] = y23;
+			matrix1[2][0] = y31;
+			matrix1[2][1] = y32;
+			matrix1[2][2] = y33;
+		}
 
 		for(int i = 0; i < matrix_size; i++){
 		
