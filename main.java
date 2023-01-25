@@ -14,7 +14,8 @@ class Main{
 		long y21, y22, y23;
 		long y31, y32, y33;
 		long n;
-		
+
+		System.out.print("Enter matrix size: ");
 		short matrix_size = scan.nextShort();
 
 		if(matrix_size > 2){
