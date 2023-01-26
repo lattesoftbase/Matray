@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Matray:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Matray_jar</output-path>
+    <root id="archive" name="Matray.jar">
+      <element id="module-output" name="Matray" />
+    </root>
+  </artifact>
+</component>

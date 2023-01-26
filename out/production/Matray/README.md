@@ -1,2 +1,0 @@
-# Matray
- Simple matrix calculator
