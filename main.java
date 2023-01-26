@@ -6,6 +6,7 @@ class Main{
 
 		Scanner scan = new Scanner(System.in);
 
+		// Создаем переменные для матрицы
 		long x11, x12, x13;
 	    long x21, x22, x23;
 		long x31, x32, x33;
@@ -14,22 +15,27 @@ class Main{
 		long y31, y32, y33;
 		long n = 1;
 
+		// Просим ввести размер матрицы
 		System.out.print("Enter matrix size: ");
 		short matrix_size = scan.nextShort();
 		short choose;
 
 		boolean loop = true;
 
+		// Создаем сами матрицы и помещаем в них переменные
 		long[][] matrix = new long[matrix_size][matrix_size];
 		long[][] matrix1 = new long[matrix_size][matrix_size];
 
+		// Главный цикл
 		while(loop == true){
 
+			// Спрашиваем про продолжение работы программы
 			System.out.println("Continue? (true = yes, false = no)");
 			loop = scan.nextBoolean();
 
 			if(loop == false){break;}
 
+			// Спрашиваем действие с матрицамиы
 			System.out.println("Choose action(0 - +, 1 - -. 2 - *, 3 - /, 4 - X * N):");
 			choose = scan.nextShort();
 
@@ -37,6 +43,7 @@ class Main{
 				n = scan.nextLong();
 			}
 
+			// Вводим значения матриц
 			System.out.println("Enter first line x:");
 			x11 = scan.nextLong();
 			x12 = scan.nextLong();
@@ -53,6 +60,7 @@ class Main{
 			y21 = scan.nextLong();
 			y22 = scan.nextLong();
 
+			// Инициализация значений матрицы
 			matrix[0][0] = x11;
 			matrix[0][1] = x12;
 
@@ -66,6 +74,8 @@ class Main{
 
 
 			if(matrix_size > 2){
+
+				// Вводим значения матриц
 				System.out.println("Enter extended first line x:");
 				x13 = scan.nextLong();
 
@@ -86,6 +96,7 @@ class Main{
 				y32 = scan.nextLong();
 				y33 = scan.nextLong();
 
+				// Инициализация значений матрицы 3x3
 				matrix[0][2] = x13;
 				matrix[1][2] = x23;
 				matrix[2][0] = x31;
@@ -100,10 +111,12 @@ class Main{
 
 			System.out.println("Result:");
 
+			// Выводим результат с помощью цикла
 			for(int i = 0; i < matrix_size; i++){
 
 				for(int j = 0; j < matrix_size; j++){
 
+					// Выбор действия
 					switch(choose){
 						case 0:
 							System.out.print(matrix[i][j] + matrix1[i][j] + " ");
